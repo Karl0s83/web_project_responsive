@@ -8,6 +8,9 @@
 :root {
     --primary: #e8d1bc;
     --secondary: #524031;
+    --third: #a08c52;
+    --fourt: #52403183;
+    --fifth: #c48f64;
     --height: 80px
 }
 
@@ -32,6 +35,7 @@ ol, ul {
 .logo {
     display: flex;
     justify-content: space-between;
+    color: var(--primary);
 }
 
 .miniatura {
@@ -66,10 +70,6 @@ ol, ul {
 }
 
 
-.logo {
-    color: var(--primary);
-}
-
 .list_icon {
     cursor: pointer;
     color: var(--primary);
@@ -99,6 +99,52 @@ ol, ul {
     font-weight: bold;
 }
 
+.search-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 70%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--secondary);
+    border-radius: 30px;
+    padding: 3px 5px;
+    margin-bottom: 10px;
+    background-color: var(--fourt);
+    margin-top: 15px;
+}
+
+.search-bar input {
+    background-color: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 3px 10px;
+    font-size: 15px;
+}
+
+::placeholder {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+#lupa {
+    width: 20px;
+}
+
+.search-bar button {
+    border: 2px solid var(--secondary);
+    border-radius: 70%;
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary);
+
+}
+
 .new {
     display: flex;
     align-items: center;
@@ -106,12 +152,12 @@ ol, ul {
 }
 
 .newbar {
-    border: 1px solid #c48f64;
-    background-color: #c48f64;
+    border: 1px solid var(--fifth);
+    background-color: var(--fifth);
     border-radius: 15px;
     padding: 5px 3px;
     margin: 10px;
-    box-shadow: 5px 5px 8px 2px #524031;
+    box-shadow: 5px 5px 8px 2px var(--secondary);
 }
 
 .new img {
@@ -183,10 +229,11 @@ el tamaño del item, sigue estando casi en el borde de abajo*/
 }
 
 .carrito a:hover {
-    background-color: var(--primary);
+    background-color: var(--third);
     color: black;
     box-shadow: 0 6px 0 -2px rgba(7, 9, 10, 0.541);
     transform: translateY(2px);
+    cursor: pointer;
 }
 
 #more {
@@ -199,8 +246,8 @@ el tamaño del item, sigue estando casi en el borde de abajo*/
 }
 
 .mostrar h2 {
-    border: 1px solid #c48f64;
-    background-color: #c48f64;
+    border: 1px solid var(--fifth);
+    background-color: var(--fifth);
     border-radius: 15px;
     padding: 10px 5px;
     margin: 10px;
@@ -219,3 +266,64 @@ el tamaño del item, sigue estando casi en el borde de abajo*/
     padding: 10px;
 }
 
+footer {
+    background: linear-gradient(var(--fifth),#a1583e);
+    margin-top: 30px;
+    border-top: #a1583e 1px solid;
+    display: grid;
+    flex-direction: wrap;
+    position: relative;
+}
+
+footer h2 {
+    margin-bottom: 15px;
+    color: #6f3831;
+}
+
+footer li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+footer .category li span {
+    margin-left: 10px;
+}
+
+footer .category {
+    flex: 1;
+    margin: 10px;
+    padding: 20px 0px 0px 30px;
+    align-items: center;
+}
+
+footer .category li a {
+    text-decoration: none;
+    color: #efe3d6;
+    display: flex;
+    align-items: center; 
+}
+
+.copy {
+    background: #331715;
+    color: #dec6a9;
+    display: grid;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.copy a {
+    color: #dec6a9;
+}
+
+
+@media (max-width: 768px) {
+    footer {
+        display: grid;
+        font-size: 30px;
+    }
+
+    .copy {
+        font-size: 30px;
+    }
+}
