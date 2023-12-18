@@ -8,6 +8,7 @@
 :root {
     --primary: #e8d1bc;
     --secondary: #524031;
+    --height: 80px
 }
 
 body {
@@ -28,12 +29,17 @@ ol, ul {
     list-style: none;
 }
 
-.logo img{
-    width: 60px;
-    margin-left: 40%;
+.logo {
+    display: flex;
+    justify-content: space-between;
 }
+
+.miniatura {
+    width: 60px;
+}
+
 .header {
-    height: 80px;
+    height: var(--height);
     background-color: var(--secondary);
     border-bottom: 2px solid black;
 }
@@ -44,7 +50,6 @@ ol, ul {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    position: relative;
     padding: 0 2rem ;
 }
 
@@ -57,8 +62,9 @@ ol, ul {
 }
 
 #menu_hamburguesa:checked + .ul_links {
-    height: calc(100vh - 80px);
+    height: calc(100vh - var(--height));
 }
+
 
 .logo {
     color: var(--primary);
@@ -73,7 +79,7 @@ ol, ul {
     width: 100%;
     background-color: var(--secondary);
     position: absolute;
-    top: 80px;
+    top: var(--height);
     left: 0;
     height: 0;
     display: flex;
@@ -109,7 +115,7 @@ ol, ul {
 }
 
 .new img {
-    width: 75px;
+    width: var(--height);
     float: left;
     margin-left: 5px;
 }
@@ -152,6 +158,11 @@ ol, ul {
     margin: 10px 0 10px 0;  
 }
 
+/*intenté poner lo que es la barra de "Añadir al carrito" un poco más centrado, 
+pero al tener dos lineas, se desplaza muy hacia abajo, casi en el borde..por mucho que modifique
+el tamaño del item, sigue estando casi en el borde de abajo*/
+  
+
 .carrito .cesta {
     margin-right: 5px;
 }
@@ -177,3 +188,34 @@ ol, ul {
     box-shadow: 0 6px 0 -2px rgba(7, 9, 10, 0.541);
     transform: translateY(2px);
 }
+
+#more {
+    display: flex;
+    justify-content: center;
+}
+
+#more a {
+    text-decoration: none;
+}
+
+.mostrar h2 {
+    border: 1px solid #c48f64;
+    background-color: #c48f64;
+    border-radius: 15px;
+    padding: 10px 5px;
+    margin: 10px;
+    box-shadow: 5px 5px 8px 2px var(--secondary);   
+    color: var(---secondary);
+}
+
+.publicidad {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video video {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
