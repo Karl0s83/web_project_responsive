@@ -270,19 +270,25 @@ footer {
     background: linear-gradient(var(--fifth),#a1583e);
     margin-top: 30px;
     border-top: #a1583e 1px solid;
-    display: grid;
-    flex-direction: wrap;
-    position: relative;
+    height: 100%;
+}
+
+.redes_category {
+    display: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 footer h2 {
     margin-bottom: 15px;
     color: #6f3831;
+    font-size: 30px;
 }
 
 footer li {
     list-style: none;
     margin-bottom: 10px;
+    font-size: 25px;
 }
 
 footer .category li span {
@@ -298,9 +304,7 @@ footer .category {
 
 footer .category li a {
     text-decoration: none;
-    color: #efe3d6;
-    display: flex;
-    align-items: center; 
+    color: #efe3d6; 
 }
 
 .copy {
@@ -309,6 +313,7 @@ footer .category li a {
     display: grid;
     text-align: center;
     padding: 10px;
+    width: 100%;
 
 }
 
@@ -317,13 +322,41 @@ footer .category li a {
 }
 
 
-@media (max-width: 768px) {
-    footer {
-        display: grid;
-        font-size: 30px;
+@media (min-width: 768px) {
+
+    
+
+    .publicidad {
+        display: flex;
+        justify-content: center;
+    }
+
+    .publicidad .video{
+        width: 50%;
+    }
+    footer .secciones{
+        display: flex;
+        flex-direction: wrap;
+    }
+
+    footer h2{
+        font-size: 25px;
+    }
+
+    footer li {
+        font-size: 20px;
     }
 
     .copy {
-        font-size: 30px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1023px) {
+
+
+    footer .secciones {
+        display: flex;
+        justify-content: center;
     }
 }
