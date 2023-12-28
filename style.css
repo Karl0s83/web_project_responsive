@@ -406,12 +406,12 @@ footer .category li a {
 
     .publicidad {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
 
     }
 
     .video {
-        width: 520px;
+        width: 500px;
     }
     
 }    
