@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Voltaire', sans-serif; 
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -169,7 +170,7 @@ espero que os guste */
     height: 580px;
 }
 
-.product p {
+.productos p {
     color: var(--secondary);
     font-size: 17px;
     display: flex;
